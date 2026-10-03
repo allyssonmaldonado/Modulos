@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>GreenMarket | Productos Naturales</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      :root {
+        --color-principal: #198754;
+        --color-secundario: #eaf5ee;
+        --color-acento: #f4b942;
+        --color-texto: #2d3436;
+        --color-footer: #18352a;
+      }
+
+      body {
+        background-color: var(--color-secundario);
+        color: var(--color-texto);
+        font-family: Arial, sans-serif;
+      }
+
+      /* Encabezado principal */
+      .jumbotron {
+        background: linear-gradient(135deg, #198754, #116530);
+        color: white;
+        padding: 5rem 2rem;
+        text-align: center;
+      }
+
+      .jumbotron h1 {
+        font-weight: bold;
+      }
+
+      /* Características */
+      .caracteristica {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 12px;
+        height: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+
+      .caracteristica:hover {
+        transform: translateY(-5px);
+      }
+
+      .caracteristica i {
+        font-size: 2rem;
+        color: var(--color-principal);
+        margin-bottom: 1rem;
+      }
+
+      /* Productos */
+      .producto {
+        background-color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 1.5rem;
+        height: 100%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .producto:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+      }
+
+      .producto-icono {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 1rem;
+        border-radius: 50%;
+        background-color: var(--color-secundario);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-principal);
+        font-size: 1.8rem;
+      }
+
+      .producto h3 {
+        color: var(--color-principal);
+      }
+
+      .precio {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--color-acento);
+        margin-bottom: 1rem;
+      }
+
+      .btn-green {
+        background-color: var(--color-principal);
+        color: white;
+        border: none;
+      }
+
+      .btn-green:hover {
+        background-color: #146c43;
+        color: white;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--color-footer);
+        color: white;
+        padding: 2.5rem 1rem;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-left,
+      .footer-center,
+      .footer-right {
+        flex: 1;
+        padding: 0.5rem;
+      }
+
+      .footer-left {
+        text-align: left;
+      }
+
+      .footer-center {
+        text-align: center;
+      }
+
+      .footer-right {
+        text-align: right;
+      }
+
+      .red-social {
+        color: white;
+        font-size: 1.3rem;
+        margin-right: 12px;
+        transition: color 0.3s ease;
+      }
+
+      .red-social:hover {
+        color: var(--color-acento);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .jumbotron {
+          padding: 3.5rem 1rem;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-left,
+        .footer-center,
+        .footer-right {
+          text-align: center;
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Encabezado -->
+    <header class="jumbotron animate__animated animate__fadeIn">
+      <div class="container">
+        <h1 class="display-4 animate__animated animate__fadeInDown">
+          GreenMarket
+        </h1>
+
+        <p class="lead animate__animated animate__fadeInUp">
+          Productos naturales para un estilo de vida más saludable
+        </p>
+
+        <a href="#productos" class="btn btn-light mt-3"> Explorar productos </a>
+      </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container my-5">
+      <!-- Características -->
+      <section class="mb-5">
+        <div class="text-center mb-4">
+          <h2>¿Qué nos caracteriza?</h2>
+
+          <p>
+            En GreenMarket buscamos ofrecer productos de calidad pensando en
+            nuestros clientes y en el medio ambiente.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Característica 1 -->
+          <div class="col-12 col-md-4">
+            <div
+              class="caracteristica text-center animate__animated animate__fadeInLeft"
+            >
+              <i class="fas fa-leaf"></i>
+
+              <h4>Productos naturales</h4>
+
+              <p>
+                Seleccionamos productos elaborados con ingredientes naturales y
+                de buena calidad.
+              </p>
+            </div>
+          </div>
+
+          <!-- Característica 2 -->
+          <div class="col-12 col-md-4">
+            <div
+              class="caracteristica text-center animate__animated animate__fadeInUp"
+            >
+              <i class="fas fa-recycle"></i>
+
+              <h4>Compromiso ambiental</h4>
+
+              <p>
+                Promovemos alternativas que ayudan a reducir el impacto sobre el
+                medio ambiente.
+              </p>
+            </div>
+          </div>
+
+          <!-- Característica 3 -->
+          <div class="col-12 col-md-4">
+            <div
+              class="caracteristica text-center animate__animated animate__fadeInRight"
+            >
+              <i class="fas fa-heart"></i>
+
+              <h4>Bienestar</h4>
+
+              <p>
+                Ofrecemos opciones pensadas para acompañar hábitos saludables en
+                la vida diaria.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Productos -->
+      <section id="productos">
+        <div class="text-center mb-4">
+          <h2>Productos destacados</h2>
+
+          <p>Conoce algunas de las opciones disponibles en nuestra tienda.</p>
+        </div>
+
+        <!-- Sistema de grillas + Flex -->
+        <div class="row d-flex flex-wrap g-4">
+          <!-- Producto 1 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="producto text-center animate__animated animate__zoomIn">
+              <div class="producto-icono">
+                <i class="fas fa-mug-hot"></i>
+              </div>
+
+              <h3>Té Natural</h3>
+
+              <p>
+                Mezcla de hierbas naturales ideal para disfrutar en cualquier
+                momento del día.
+              </p>
+
+              <div class="precio">L 150.00</div>
+
+              <button class="btn btn-green ver-mas">Ver producto</button>
+            </div>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="producto text-center animate__animated animate__zoomIn">
+              <div class="producto-icono">
+                <i class="fas fa-seedling"></i>
+              </div>
+
+              <h3>Plantas Decorativas</h3>
+
+              <p>
+                Plantas ideales para darle un toque natural y agradable a tus
+                espacios.
+              </p>
+
+              <div class="precio">L 280.00</div>
+
+              <button class="btn btn-green ver-mas">Ver producto</button>
+            </div>
+          </div>
+
+          <!-- Producto 3 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="producto text-center animate__animated animate__zoomIn">
+              <div class="producto-icono">
+                <i class="fas fa-soap"></i>
+              </div>
+
+              <h3>Jabón Artesanal</h3>
+
+              <p>
+                Jabón elaborado artesanalmente con ingredientes naturales para
+                el cuidado de la piel.
+              </p>
+
+              <div class="precio">L 95.00</div>
+
+              <button class="btn btn-green ver-mas">Ver producto</button>
+            </div>
+          </div>
+
+          <!-- Producto 4 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="producto text-center animate__animated animate__zoomIn">
+              <div class="producto-icono">
+                <i class="fas fa-bottle-water"></i>
+              </div>
+
+              <h3>Botella Reutilizable</h3>
+
+              <p>
+                Botella práctica y reutilizable para acompañarte durante tus
+                actividades diarias.
+              </p>
+
+              <div class="precio">L 220.00</div>
+
+              <button class="btn btn-green ver-mas">Ver producto</button>
+            </div>
+          </div>
+
+          <!-- Producto 5 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="producto text-center animate__animated animate__zoomIn">
+              <div class="producto-icono">
+                <i class="fas fa-apple-whole"></i>
+              </div>
+
+              <h3>Snacks Naturales</h3>
+
+              <p>
+                Alternativas ligeras para disfrutar de un pequeño descanso
+                durante el día.
+              </p>
+
+              <div class="precio">L 120.00</div>
+
+              <button class="btn btn-green ver-mas">Ver producto</button>
+            </div>
+          </div>
+
+          <!-- Producto 6 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="producto text-center animate__animated animate__zoomIn">
+              <div class="producto-icono">
+                <i class="fas fa-bag-shopping"></i>
+              </div>
+
+              <h3>Bolsa Ecológica</h3>
+
+              <p>
+                Bolsa reutilizable para realizar tus compras reduciendo el uso
+                de bolsas desechables.
+              </p>
+
+              <div class="precio">L 80.00</div>
+
+              <button class="btn btn-green ver-mas">Ver producto</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <!-- Izquierda -->
+        <div class="footer-left">
+          <h5>GreenMarket</h5>
+
+          <p>
+            Productos naturales y alternativas para un consumo más responsable.
+          </p>
+
+          <div>
+            <a href="#" class="red-social">
+              <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#" class="red-social">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#" class="red-social">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Centro -->
+        <div class="footer-center">
+          <h5>Visítanos</h5>
+
+          <address>
+            <i class="fas fa-location-dot"></i>
+            Avenida Central #504<br />
+
+            Tegucigalpa, Honduras<br />
+
+            Tel: +504 2222-3333
+          </address>
+        </div>
+
+        <!-- Derecha -->
+        <div class="footer-right">
+          <h5>Información</h5>
+
+          <p>
+            Horario:
+            <br />
+            Lunes - Sábado
+            <br />
+            8:00 AM - 6:00 PM
+          </p>
+
+          <p class="mb-0">&copy; 2026 GreenMarket</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Popper -->
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+      $(document).ready(function () {
+        $(".ver-mas").click(function () {
+          $(this)
+            .closest(".producto")
+            .addClass("animate__animated animate__pulse");
+
+          setTimeout(() => {
+            $(this)
+              .closest(".producto")
+              .removeClass("animate__animated animate__pulse");
+          }, 800);
+        });
+      });
+    </script>
+  </body>
+</html>

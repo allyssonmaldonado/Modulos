@@ -1,0 +1,70 @@
+$color-amarillo: #ffc107;
+$color-rojo: #dc3545;
+$color-verde: #198754;
+$color-azul: #0d6efd;
+$color-blanco: #ffffff;
+$color-fondo: #f4f6f8;
+
+@mixin box-styles($margen, $padding, $bg-color) {
+  margin: $margen;
+  padding: $padding;
+  background-color: $bg-color;
+  color: $color-blanco;
+
+  border: 1px solid darken($bg-color, 15%);
+  border-radius: 8px;
+}
+
+body {
+  background-color: $color-fondo;
+  font-family: Arial, sans-serif;
+}
+
+.titulo {
+  margin-top: 20px;
+  margin-bottom: 15px;
+
+  color: $color-azul;
+
+  font-weight: bold;
+}
+.descripcion {
+  margin-bottom: 25px;
+
+  color: #555;
+
+  font-size: 18px;
+}
+
+.btn-principal {
+  @include box-styles(10px, 12px 25px, $color-verde);
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.btn-cerrar {
+  @include box-styles(5px, 10px 20px, $color-rojo);
+
+  font-weight: bold;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: $color-azul;
+
+  color: $color-blanco;
+}
+
+.modal-body {
+  margin: 10px;
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 15px;
+}

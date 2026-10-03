@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechStore - Proyecto Módulo 3</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .carousel img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .titulo {
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .seccion {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        footer {
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#">
+            TechStore
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#productos">
+                        Productos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#informacion">
+                        Información
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+    <div
+        id="carouselTech"
+        class="carousel slide shadow rounded"
+        data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+
+            <!-- Imagen 1 -->
+
+            <div class="carousel-item active">
+
+                <img
+                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1400&q=80"
+                    class="d-block w-100"
+                    alt="Laptop">
+
+                <div class="carousel-caption d-none d-md-block">
+
+                    <h2>La tecnología que necesitas</h2>
+
+                    <p>
+                        Encuentra equipos para estudiar,
+                        trabajar y disfrutar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Imagen 2 -->
+
+            <div class="carousel-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80"
+                    class="d-block w-100"
+                    alt="Tecnología">
+
+                <div class="carousel-caption d-none d-md-block">
+
+                    <h2>Productos modernos</h2>
+
+                    <p>
+                        Calidad y tecnología en un solo lugar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Imagen 3 -->
+
+            <div class="carousel-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1550439062-609e1531270e?w=1400&q=80&auto=format&fit=crop"
+                    class="d-block w-100"
+                    alt="Computadora">
+
+                <div class="carousel-caption d-none d-md-block">
+
+                    <h2>Promociones especiales</h2>
+
+                    <p>
+                        Aprovecha nuestros productos destacados.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Control anterior -->
+
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselTech"
+            data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+            <span class="visually-hidden">
+                Anterior
+            </span>
+
+        </button>
+
+
+        <!-- Control siguiente -->
+
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselTech"
+            data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+            <span class="visually-hidden">
+                Siguiente
+            </span>
+
+        </button>
+
+
+        <!-- Indicadores -->
+
+        <div class="carousel-indicators">
+
+            <button
+                type="button"
+                data-bs-target="#carouselTech"
+                data-bs-slide-to="0"
+                class="active">
+            </button>
+
+            <button
+                type="button"
+                data-bs-target="#carouselTech"
+                data-bs-slide-to="1">
+            </button>
+
+            <button
+                type="button"
+                data-bs-target="#carouselTech"
+                data-bs-slide-to="2">
+            </button>
+
+        </div>
+
+    </div>
+
+
+<section class="seccion" id="informacion">
+
+    <h2 class="titulo">
+        Información de TechStore
+    </h2>
+
+
+    <ul
+        class="nav nav-pills nav-fill mb-3"
+        id="pills-tab"
+        role="tablist">
+
+
+        <li class="nav-item">
+
+            <button
+                class="nav-link active"
+                data-bs-toggle="pill"
+                data-bs-target="#descripcion"
+                type="button">
+
+                Información
+
+            </button>
+
+        </li>
+
+
+        <li class="nav-item">
+
+            <button
+                class="nav-link"
+                data-bs-toggle="pill"
+                data-bs-target="#precios"
+                type="button">
+
+                Precios
+
+            </button>
+
+        </li>
+
+
+        <li class="nav-item">
+
+            <button
+                class="nav-link"
+                data-bs-toggle="pill"
+                data-bs-target="#envios"
+                type="button">
+
+                Envíos
+
+            </button>
+
+        </li>
+
+    </ul>
+
+
+    <div class="tab-content">
+
+
+        <div
+            class="tab-pane fade show active"
+            id="descripcion">
+
+            <h5>Sobre nosotros</h5>
+
+            <p>
+                En TechStore ofrecemos productos tecnológicos
+                para estudiantes, profesionales y usuarios que
+                buscan equipos modernos y funcionales.
+            </p>
+
+        </div>
+
+
+        <div
+            class="tab-pane fade"
+            id="precios">
+
+            <h5>Precios</h5>
+
+            <p>
+                Contamos con diferentes opciones de precios
+                y promociones en nuestros productos.
+            </p>
+
+        </div>
+
+
+        <div
+            class="tab-pane fade"
+            id="envios">
+
+            <h5>Envíos</h5>
+
+            <p>
+                Realizamos entregas de productos de acuerdo
+                con la disponibilidad y ubicación del cliente.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="seccion">
+
+    <h2 class="titulo">
+        Beneficios de comprar con nosotros
+    </h2>
+
+
+    <button
+        class="btn btn-primary me-2"
+        data-bs-toggle="collapse"
+        data-bs-target="#beneficio1">
+
+        Ver beneficios
+
+    </button>
+
+
+    <button
+        class="btn btn-outline-primary"
+        data-bs-toggle="collapse"
+        data-bs-target=".multi-collapse">
+
+        Mostrar todos
+
+    </button>
+
+
+    <div
+        class="collapse multi-collapse mt-3"
+        id="beneficio1">
+
+        <div class="card card-body">
+
+            <h5>Garantía</h5>
+
+            <p>
+                Nuestros productos cuentan con garantía
+                según las condiciones de cada artículo.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="collapse multi-collapse mt-3"
+        id="beneficio2">
+
+        <div class="card card-body">
+
+            <h5>Atención al cliente</h5>
+
+            <p>
+                Puedes comunicarte con nosotros para resolver
+                tus dudas antes o después de realizar una compra.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="collapse multi-collapse mt-3"
+        id="beneficio3">
+
+        <div class="card card-body">
+
+            <h5>Promociones</h5>
+
+            <p>
+                Publicamos ofertas especiales en diferentes
+                productos tecnológicos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="seccion">
+
+    <h2 class="titulo">
+        Opciones de pago
+    </h2>
+
+
+    <div
+        class="accordion"
+        id="accordionPago">
+
+
+        <!-- Tarjeta -->
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#tarjeta">
+
+                    Pago con tarjeta
+
+                </button>
+
+            </h2>
+
+
+            <div
+                id="tarjeta"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionPago">
+
+                <div class="accordion-body">
+
+                    Puedes realizar tu pago utilizando
+                    tarjetas Visa o Mastercard.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Transferencia -->
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#transferencia">
+
+                    Transferencia bancaria
+
+                </button>
+
+            </h2>
+
+
+            <div
+                id="transferencia"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionPago">
+
+                <div class="accordion-body">
+
+                    También puedes realizar una transferencia
+                    bancaria siguiendo las instrucciones de compra.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Efectivo -->
+
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#efectivo">
+
+                    Pago en efectivo
+
+                </button>
+
+            </h2>
+
+
+            <div
+                id="efectivo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionPago">
+
+                <div class="accordion-body">
+
+                    Puedes consultar los puntos disponibles
+                    para realizar el pago en efectivo.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="productos">
+
+    <h2 class="titulo">
+        Productos destacados
+    </h2>
+
+
+    <div class="row g-4">
+
+
+        <!-- Producto 1 -->
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <img
+                    src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top"
+                    alt="Laptop">
+
+                <div class="card-body">
+
+                    <h5
+                        class="card-title"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Laptop ideal para estudiar y trabajar">
+
+                        Laptop Pro
+
+                    </h5>
+
+                    <p class="card-text">
+
+                        Equipo portátil con buen rendimiento
+                        para diferentes actividades.
+
+                    </p>
+
+                    <button class="btn btn-primary">
+                        Ver producto
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Producto 2 -->
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <img
+                    src="https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top"
+                    alt="Monitor">
+
+                <div class="card-body">
+
+                    <h5
+                        class="card-title"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Monitor Full HD para trabajo y entretenimiento">
+
+                        Monitor Full HD
+
+                    </h5>
+
+                    <p class="card-text">
+
+                        Pantalla de alta calidad para mejorar
+                        tu espacio de trabajo.
+
+                    </p>
+
+                    <button class="btn btn-primary">
+                        Ver producto
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Producto 3 -->
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+            <div class="card h-100 shadow-sm">
+
+                <img
+                    src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top"
+                    alt="Audífonos">
+
+                <div class="card-body">
+
+                    <h5
+                        class="card-title"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Audífonos inalámbricos con sonido de calidad">
+
+                        Audífonos Bluetooth
+
+                    </h5>
+
+                    <p class="card-text">
+
+                        Disfruta de tu música y contenido
+                        sin utilizar cables.
+
+                    </p>
+
+                    <button class="btn btn-primary">
+                        Ver producto
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="contacto"
+    class="text-center seccion">
+
+    <h2 class="titulo">
+        ¿Quieres recibir nuestras promociones?
+    </h2>
+
+    <p>
+        Regístrate y recibe información sobre nuevos
+        productos y ofertas.
+    </p>
+
+
+    <button
+        type="button"
+        class="btn btn-success btn-lg"
+        data-bs-toggle="modal"
+        data-bs-target="#registroModal">
+
+        Registrarme ahora
+
+    </button>
+
+</section>
+
+
+</div>
+
+<div
+    class="modal fade"
+    id="registroModal"
+    tabindex="-1"
+    aria-labelledby="registroModalLabel"
+    aria-hidden="true">
+
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+
+            <!-- Encabezado -->
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="registroModalLabel">
+
+                    Regístrate en TechStore
+
+                </h5>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar">
+
+                </button>
+
+            </div>
+
+
+            <!-- Cuerpo del modal -->
+
+            <div class="modal-body">
+
+                <p>
+                    Completa tus datos para recibir
+                    nuestras promociones.
+                </p>
+
+
+                <form>
+
+
+                    <!-- Nombre -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="nombre"
+                            class="form-label">
+
+                            Nombre completo
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="nombre"
+                            placeholder="Escribe tu nombre"
+                            required>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="email"
+                            class="form-label">
+
+                            Correo electrónico
+
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="correo@ejemplo.com"
+                            required>
+
+                    </div>
+
+
+                    <!-- Selección -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="interes"
+                            class="form-label">
+
+                            Producto de interés
+
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="interes">
+
+                            <option selected>
+                                Selecciona una opción
+                            </option>
+
+                            <option>
+                                Computadoras
+                            </option>
+
+                            <option>
+                                Monitores
+                            </option>
+
+                            <option>
+                                Accesorios
+                            </option>
+
+                            <option>
+                                Dispositivos móviles
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Checkbox -->
+
+                    <div class="form-check mb-3">
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="acepto"
+                            required>
+
+                        <label
+                            class="form-check-label"
+                            for="acepto">
+
+                            Deseo recibir promociones y novedades.
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Botón -->
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary w-100">
+
+                        Crear registro
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+
+                    Cerrar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="bg-dark text-white text-center py-4">
+
+    <p class="mb-1">
+        <strong>TechStore</strong>
+    </p>
+
+    <small>
+        Proyecto Módulo 3 - Bootstrap y JavaScript
+    </small>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script>
+
+    // Activar todos los tooltips
+    const tooltips = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+    );
+
+    tooltips.forEach(function (elemento) {
+
+        new bootstrap.Tooltip(elemento);
+
+    });
+
+
+    // Cambiar la velocidad del Carousel
+    const carouselElement =
+        document.getElementById("carouselTech");
+
+    const carousel =
+        new bootstrap.Carousel(carouselElement, {
+
+            interval: 4500,
+
+            ride: "carousel"
+
+        });
+
+</script>
+
+
+</body>
+
+</html>
+
